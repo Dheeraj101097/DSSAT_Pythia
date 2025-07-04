@@ -108,7 +108,7 @@ To install and run DSSAT-Pythia on your PC, you will need the following software
 
 1. Open the command prompt at `C:\pythia\Simulation_Data_India\India` by typing `cmd` in the folder address bar.
 
-2. Run the following commands to simulate maize and rice:
+2. Run the following commands to simulate soybean:
 
    ```bash
    pythia --all C:/pythia/Simulation_Data_India/India/IN_SYB.json
@@ -139,9 +139,7 @@ To install and run DSSAT-Pythia on your PC, you will need the following software
 
 ## 1. Overview
 
-This section details the complete workflow for setting up and running the DSSAT-Pythia modeling framework, including installation, environment setup, weather data generation for India, and automation scripts for file formatting. The process is based on the official [DSSAT-Pythia GitHub repository](https://github.com/DSSAT/pythia.git).
-
----
+## This section details the complete workflow for setting up and running the DSSAT-Pythia modeling framework, including installation, environment setup, weather data generation for India, and automation scripts for file formatting.
 
 ## 2. Weather File Generation for India
 
@@ -167,9 +165,9 @@ OBJECTID,Lat,Long
 
 Place this file in the same directory as the script or update the path in the script.
 
-### 2.3. Script: run_to_gen_wth.py
+### 2.3. Script: wth_generator.py
 
-- **Location:** Simulation_Data/OUTPUT/run_to_gen_wth.py
+- **Location:** Simulation_Data/OUTPUT/wth_generator.py
 - **Input:** lat_long.csv
 - **Output:** .WTH files in D:/Weather_data_wth/
 
@@ -209,7 +207,7 @@ DSSAT uses `.CUL` files for cultivar information. The automation script (`run_py
 
 ### 3.2. Required Input: Cultivar Parameter CSV
 
-- The script expects a CSV file (e.g., `localized_parameters_gaussian350.csv`) containing cultivar parameters for each simulation.
+- The script expects a CSV file (e.g., `example_parameters.csv`) containing cultivar parameters for each simulation which can be generated from (`csv_generator.py`).
 - Make sure to update the file paths in the script for your environment.
 
 ### 3.3. Script: run_pythia.py
