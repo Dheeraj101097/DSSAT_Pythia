@@ -8,12 +8,12 @@ To install and run DSSAT-Pythia on your PC, you will need the following software
    Download and install DSSAT from [DSSAT website](https://get.dssat.net/request/?sft=4).
 
 2. **Python 3.12**:  
-   Download the Python 3.12 installer for Windows or macOS from [Python 3.12 release page](https://www.python.org/downloads/release/python-312/).
+   Download the Python 3.12 installer for Windows or macOS from [Python 3.12 release page](https://www.python.org/downloads/release/python-3120/).
 
    - During installation, select "Customize installation."
    - Select all options under "Optional Features" and "Advanced Options."
    - Note: DSSAT-Pythia works with Python 3.12. If you have another version, uninstall it and download Python 3.8 from the above link.
-   - Also install pip from []().
+   - Install latest version of pip.
 
 3. **Git**:  
    Download and install Git from [Git download page](https://git-scm.com/download/win).
@@ -75,13 +75,10 @@ To install and run DSSAT-Pythia on your PC, you will need the following software
    - Navigate to the `dist` folder and install the `.whl` file:
      ```bash
      cd dist
+     pip install numpy matplotlib
      pip install pythia-2.3.0-py3-none-any.whl
      ```
    - **Note**: Check the version in the `dist` folder and adjust the command if necessary.If received error
-
-   ```bash
-    pip install numpy matplotlib
-   ```
 
 9. Add the path to `pythia.exe` to your environment variables.
 
